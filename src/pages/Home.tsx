@@ -59,7 +59,7 @@ export default function Home({}: Props) {
         </form>
         <div className="px-6 py-4 bg-white dark:bg-gray-700 rounded-md border-none outline-none">
           <select
-            className=" border-none outline-none bg-white dark:bg-gray-700"
+            className=" border-none outline-none bg-white dark:bg-gray-700 w-full md:w-36"
             value={region}
             onChange={({ target }) => setRegion(target.value)}
           >
