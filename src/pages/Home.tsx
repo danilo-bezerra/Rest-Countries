@@ -83,8 +83,12 @@ export default function Home({}: Props) {
               key={c.cca2}
               className="bg-white text-gray-900 dark:bg-gray-700 dark:text-white rounded-md max-w-max mx-auto overflow-hidden shadow-md"
             >
-              <img className="" src={c.flags.png} alt={c.flags.alt} />
-              <div className="p-6">
+              <img
+                className="aspect-video w-full border-b-[1px]"
+                src={c.flags.png}
+                alt={c.flags.alt}
+              />
+              <div className="p-6 py-4">
                 <h3 className="font-bold text-xl pb-3">{c.name.common}</h3>
                 <p>
                   <span className="font-semibold">Population:</span>{" "}
