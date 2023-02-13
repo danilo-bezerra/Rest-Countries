@@ -76,7 +76,7 @@ export default function Home({}: Props) {
       {isLoading ? (
         <Loading />
       ) : (
-        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 py-8 ">
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-8 ">
           {filteredCountries.map((c, i) => (
             <NavLink
               to={`/country/${c.cca2}`}
