@@ -31,7 +31,7 @@ export default function Home({}: Props) {
       const { data } = res;
       setCountries(data);
     }
-
+    document.title = "Alien Countries";
     getAll();
   }, []);
 

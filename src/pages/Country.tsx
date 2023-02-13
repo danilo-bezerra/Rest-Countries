@@ -30,6 +30,7 @@ export default function Country({}: Props) {
       }
       getBorders();
     }
+    document.title = country?.name.common!;
   }, [country]);
 
   return (
