@@ -43,7 +43,7 @@ export default function Home({}: Props) {
     <main className="p-6 text-gray-900 dark:text-white max-w-[1484px] mx-auto">
       <div className="flex justify-between flex-col   gap-6 md:flex-row">
         <form
-          className="flex bg-white dark:bg-gray-700 px-6 py-4 rounded-md shadow-md dark:text-zinc-100"
+          className="flex bg-white dark:bg-gray-700 px-6 py-4 rounded-md shadow-md dark:text-zinc-100 md:w-[400px] "
           onSubmit={handleSearch}
         >
           <input

@@ -85,7 +85,9 @@ export default function Country({}: Props) {
             </div>
             {borders && (
               <div className="col-span-2 flex flex-wrap items-center gap-2">
-                <h3 className="font-semibold">Border Countries: </h3>
+                <h3 className="font-semibold w-full md:w-max">
+                  Border Countries:{" "}
+                </h3>
                 {borders.map((c) => (
                   <Link to={`/country/${c.cca2}`} key={c.cca2}>
                     {c.name.common}
