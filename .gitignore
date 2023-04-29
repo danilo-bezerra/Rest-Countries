@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+extra
+src/utils
+src/pages/menu.tsx
+src/model

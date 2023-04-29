@@ -9,7 +9,7 @@ export default function Header({}: Props) {
       <div className="flex justify-between items-center max-w-[1440px] mx-auto ">
         <NavLink to="/">
           <h1 className="font-bold text-2xl dark:text-slate-100">
-            Where in the world?
+            Países do mundo
           </h1>
         </NavLink>
 

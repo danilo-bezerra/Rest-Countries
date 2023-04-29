@@ -30,13 +30,13 @@ export default function Country({}: Props) {
       }
       getBorders();
     }
-    document.title = country?.name.common!;
+    document.title = `Países do mundo | ${country?.name.common! || ""}`;
   }, [country]);
 
   return (
     <main className="p-6 dark:text-zinc-200 max-w-[1484px] mx-auto">
       <Link to="/" className="mb-10">
-        <ArrowLeft size={24} /> Back
+        <ArrowLeft size={24} /> Voltar
       </Link>
       {country && (
         <section className="grid grid-cols-1 md:grid-cols-2 md:gap-20">
@@ -49,17 +49,17 @@ export default function Country({}: Props) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 py-8  gap-y-6 gap-x-4">
               <div className="flex flex-col gap-2">
                 <p>
-                  <strong>Native Name:</strong> {country.name.official}
+                  <strong>Nome Nativo:</strong> {country.name.official}
                 </p>
                 <p>
-                  <strong>Population:</strong>{" "}
+                  <strong>População:</strong>{" "}
                   {country.population.toLocaleString()}
                 </p>
                 <p>
-                  <strong>Region:</strong> {country.region}
+                  <strong>Região:</strong> {country.region}
                 </p>
                 <p>
-                  <strong>Sub Region:</strong> {country.subregion}
+                  <strong>Sub Região:</strong> {country.subregion}
                 </p>
                 <p>
                   <strong>Capital:</strong> {country.capital}
@@ -67,16 +67,16 @@ export default function Country({}: Props) {
               </div>
               <div className="flex flex-col gap-2">
                 <p>
-                  <strong>Top level Domain:</strong> {country.tld.map((t) => t)}
+                  <strong>TLD:</strong> {country.tld.map((t) => t)}
                 </p>
                 <p>
-                  <strong>Currencies:</strong>{" "}
+                  <strong>Moeda:</strong>{" "}
                   {Object.values(country.currencies)
                     .map((v: any) => v.name)
                     .join(", ")}
                 </p>
                 <p>
-                  <strong>Languages:</strong>{" "}
+                  <strong>Idioma:</strong>{" "}
                   {Object.values(country.languages)
                     .map((v) => v)
                     .join(", ")}
@@ -86,7 +86,7 @@ export default function Country({}: Props) {
             {borders && (
               <div className="col-span-2 flex flex-wrap items-center gap-2">
                 <h3 className="font-semibold w-full md:w-max">
-                  Border Countries:{" "}
+                  Países fronteiriços:{" "}
                 </h3>
                 {borders.map((c) => (
                   <Link to={`/country/${c.cca2}`} key={c.cca2}>
